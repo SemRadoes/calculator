@@ -6,36 +6,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="calculator.css" type="text/css" />
 		<title>calculator</title>
+		<script defer src="./calculator.js"></script>
 	</head>
 	<body>
-		<div class="calculator-body">
-			<h1 class="calculator-title">Calculator project</h1>
-			<div class="calculator-innerbody">
-                <div class="screen_div">
-                    <input name="screen" class="screen" id="screen_id">
-                </div>
-				<div class="calc-buttons">
-					<div class="numbers" value="1" id="1" onclick="add1()">1</div>
-					<div class="numbers" value="2" id="2" onclick="add2()">2</div>
-					<div class="numbers" value="3" id="3" onclick="add3()">3</div>
-					<div class="numbers" value="4" id="4" onclick="add4()">C</div>
-					<div class="numbers" value="5" id="5" onclick="add5()">4</div>
-					<div class="numbers" value="6" id="6" onclick="add6()">5</div>
-					<div class="numbers" value="7" id="6" onclick="add7()">6</div>
-                    <div class="plusmin"> 
-                        <div class="plus" value="+" id="plus" onclick="addPlus()">+</div>
-					    <div class="plus" value="-" id="min" onclick="addMin()">-</div>   
-                    </div> 
-					<div class="numbers" value="7" id="7" onclick="add7()">7</div>
-					<div class="numbers" value="8" id="8" onclick="add8()">8</div>
-					<div class="numbers" value="9" id="9" onclick="add9()">9</div>
-					<div class="numbers" id="CE" onclick="CE()">CE</div>
-					<div class="numbers" value="." id="punt" onclick="addPoint()">.</div>
-					<div class="numbers" value="0" id="0" onclick="add0()">0</div>
-					<div class="numbers" value="," id="komma" onclick="addKomma()">,</div>
-					<div class="numbers" value="=" id="isgelijkaan" onclick="calculate()">=</div>
-				</div>
+		<div class="grid">
+			<div class="screen_div">
+				<div data-previous-char class="previousChar">123</div>
+				<div data-current-char class="currentChar">456</div>
 			</div>
+			<button data-delete class="span-two">ce</button>
+			<button data-erase>c</button>
+			<button data-operator>÷</button>
+			<button data-number>1</button>
+			<button data-number>2</button>
+			<button data-number>3</button>
+			<button data-operator>+</button>
+			<button data-number>4</button>
+			<button data-number>5</button>
+			<button data-number>6</button>
+			<button data-operator>-</button>
+			<button data-number>7</button>
+			<button data-number>8</button>
+			<button data-number>9</button>
+			<button data-operator>*</button>
+			<button >.</button>
+			<button data-number>0</button>
+			<button data-equals class="span-two">=</button>
 		</div>
 	</body>
 </html>

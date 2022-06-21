@@ -1,99 +1,48 @@
+
 body {
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	width: 100vw;
-
-	border-radius: 10px;
+	margin: 0;   
+    background-image: linear-gradient(to right, #00AAFF,#00FF6C);
+    padding: 20px;
 }
 
-.calculator-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	gap: 2%;
-	border: 2px solid black;
-	border-radius: 5px;
-	background-color: rgba(0, 0, 0, 0.5);
-	width: 95%;
-	height: 95%;
+.grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.calculator-title {
-	color: rgba(18, 3, 3, 0.5);
+.grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    height: 100%;
+    background-color: rgba(255,255,255, .75);
+}
+.grid > button:hover{
+    
+    background-color: rgba(255,255,255, .9);
+}
+.span-two{
+    grid-column: span 2;
 }
 
-.calculator-innerbody {
+.screen_div{
+    grid-column: 1 / -1;
+    background-color: rgba(000,000,000,.75);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-	border: 2px solid black;
-	border-radius: 5px;
-	background-color: rgba(18, 3, 3, 0.5);
-	width: 30%;
-	height: 70%;
-
-}
-.screen_div{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    height: 15%;
-    
+    align-items: flex-end;
+    padding: 10px;
+    height: 85%; ;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: aliceblue;
 }
 
-.screen{
-    width: 80%;
-    height: 80%;
-    font-size: 40px;
-    box-shadow: 0 2px 4px;
-}
-.calc-buttons{
-    display: flex;
-	justify-content: center;
-	align-items: center;
-    flex-wrap: wrap;
-    height:75%;
-    width:80%;
-    align-self: center;
-}
-.numbers{
-    display: flex;
-	justify-content: space-around;
-	align-items: center;
-    margin-left: 10px;
-    width: 20%;
-    height: 20%;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,.2);
-    font-size: 50px;
-    border: 1px solid orange;
-    box-shadow: 0 5px 2px;
-}
-#CE{
-    font-size: 35px;
-}
-.plusmin{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 10px;
-    width: 20%;
-    height: 20%;
-    
-}
 
-.plus{
-    width: 70%;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid orange;
-    box-shadow: 0 5px 2px;
-    border-radius: 50%;
-}
+
+

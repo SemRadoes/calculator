@@ -1,50 +1,73 @@
-function add1(){
-    document.querySelector('#1')
+class Calculator{
+	constructor(previousCharTextElement,currentCharTextElement){
+		this.previousCharTextElement = previousCharTextElement;
+		this.currentCharTextElement = currentCharTextElement;
+		this.clear();
+	}
+	clear() {
+		this.currentChar = '';
+    	this.previousChar = '';
+    	this.operation = undefined;
+	}
+	
+	delete() {
+	}
+	
+	appendNumber(number) {
+		this.currentChar = number;
+	}
+	
+	chooseOperation(operation) {
+	}
+	
+	compute() {
+	}
+	
+	updateDisplay() {
+		this.currentCharTextElement.innerText = this.currentChar;
+	}
 }
-function add2(){
-    document.querySelector('#2')
-}
-function add3(){
-    document.querySelector('#3')
-}
-function add4(){
-    document.querySelector('#4')
-}
-function add5(){
-    document.querySelector('#5')
-}
-function add6(){
-    document.querySelector('#6')
-}
-function add7(){
-    document.querySelector('#7')
-}
-function add8(){
-    document.querySelector('#8')
-}
-function add9(){
-    document.querySelector('#9')
-}
-function add0(){
-    document.querySelector('#0')
-}
-function CE(){
-    document.querySelector('#CE')
-}
-function addPlus(){
-    document.querySelector('#plus')
-}
-function addMin(){
-    document.querySelector('#min')
-}
-function addPoint(){
-    document.querySelector('#punt')
-}
-function addKomma(){
-    document.querySelector('#komma')
-}
+const number = document.querySelectorAll('[data-number]');
+const operators = document.querySelectorAll('[data-operator]');
+const equals = document.querySelector('[data-equals]');
+const erase = document.querySelector('[data-erase]');
+const deleteIt = document.querySelector('[data-delete]');
+const previousCharTextElement = document.querySelector('[data-previous-char]');
+const currentCharTextElement = document.querySelector('[data-current-char]');
+const calculator = new Calculator(previousCharTextElement, currentCharTextElement);
+
+number.forEach(button => {
+	button.addEventListener('click', () => {
+		calculator.appendNumber(button.innerText);
+		calculator.updateDisplay();
+	});
+});
 
 
-function calculate(){
-    
-}
+// let calculating = "";
+// function add(number) {
+	// 	document.querySelector("#screen_id").value = "";
+	// 	calculating += number;
+	// 	document.querySelector("#screen_id").value = calculating;
+	// }
+	
+	// function CE() {
+		// 	document.querySelector("#screen_id").value = "";
+		// 	calculating = "";
+// }
+// function C() {
+// 	calculating = calculating.slice(0, -1)
+// 	document.querySelector("#screen_id").value = calculating;
+// }
+
+// function calculate() {
+// 	let number;
+// 	calculating = calculating.split(/[*-+/]+/);
+// 	for(let i = 0; i < calculating.length; i++){
+		
+// 		if(i === "*"){
+// 			const uitkomst = parseInt(number);
+// 		}
+// 	}
+
+// }
