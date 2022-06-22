@@ -43,6 +43,14 @@ body {
     color: aliceblue;
 }
 
+.previousChar{
+    font-size: large;
+}
+
+.currentChar{
+    font-size: xx-large;
+}
+
 
 
 
