@@ -77,10 +77,10 @@ class Calculator {
 
 	updateDisplay() {
 		this.currentCharTextElement.innerText = this.getDisplayNumber(this.currentChar);
-		if (this.operation != undefined) {
+		if (this.operation != null) {
 			this.previousCharTextElement.innerText = `${this.getDisplayNumber(this.previousChar)} ${this.operation}`;
 		} else {
-			this.previousCharTextElement.innertext = '';
+			this.previousCharTextElement.innerText = '';
 		}
 	}
 }
